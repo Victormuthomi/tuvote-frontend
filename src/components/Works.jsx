@@ -21,11 +21,11 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-100 text-center">
-      <h2 className="text-5xl font-extrabold text-gray-900 tracking-tight">
+    <section className="py-20 bg-gray-100 dark:bg-gray-900 text-center">
+      <h2 className="text-5xl font-extrabold text-gray-900 dark:text-white tracking-tight">
         How It Works
       </h2>
-      <p className="text-gray-600 mt-3 text-lg">
+      <p className="text-gray-600 dark:text-gray-300 mt-3 text-lg">
         A simple and secure voting process in three easy steps.
       </p>
 
@@ -34,17 +34,17 @@ const HowItWorks = () => {
           <motion.div
             key={index}
             whileHover={{ scale: 1.05 }}
-            className="bg-white p-8 rounded-2xl shadow-lg text-center border border-gray-200 transition-all duration-300 hover:shadow-2xl max-w-xs"
+            className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg text-center border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:shadow-2xl max-w-xs"
           >
             <div className="flex justify-center items-center mb-6">
-              <div className="bg-gradient-to-br from-blue-500 to-blue-700 p-4 rounded-full shadow-md">
+              <div className="bg-gradient-to-br from-blue-500 to-blue-700 dark:from-blue-600 dark:to-blue-800 p-4 rounded-full shadow-md">
                 {step.icon}
               </div>
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 tracking-wide">
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white tracking-wide">
               {step.title}
             </h3>
-            <p className="mt-3 text-gray-600 text-lg leading-relaxed">
+            <p className="mt-3 text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
               {step.desc}
             </p>
           </motion.div>

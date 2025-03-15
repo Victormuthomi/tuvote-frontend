@@ -20,10 +20,13 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-20 bg-white text-gray-900">
+    <section
+      id="contact"
+      className="py-20 bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
+    >
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-4xl font-bold">Contact Us</h2>
-        <p className="text-lg text-gray-600 mt-2">
+        <p className="text-lg text-gray-600 dark:text-gray-300 mt-2">
           Have questions or need support? Reach out to us.
         </p>
       </div>
@@ -33,7 +36,7 @@ const Contact = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3 }}
         onSubmit={handleSubmit}
-        className="mt-10 max-w-3xl mx-auto bg-gray-100 p-6 rounded-lg shadow-md"
+        className="mt-10 max-w-3xl mx-auto bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <input
@@ -43,7 +46,7 @@ const Contact = () => {
             onChange={handleChange}
             placeholder="Your Name"
             required
-            className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"
+            className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
           />
           <input
             type="email"
@@ -52,7 +55,7 @@ const Contact = () => {
             onChange={handleChange}
             placeholder="Your Email"
             required
-            className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"
+            className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
           />
         </div>
         <textarea
@@ -62,7 +65,7 @@ const Contact = () => {
           placeholder="Your Message"
           required
           rows="5"
-          className="w-full p-3 mt-4 border rounded-lg focus:ring-2 focus:ring-blue-500"
+          className="w-full p-3 mt-4 border rounded-lg focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
         />
         <button
           type="submit"

@@ -32,40 +32,46 @@ const FAQ = () => {
   };
 
   return (
-    <section className="py-20 bg-gray-100 text-gray-900">
+    <section className="py-20 bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-200">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-4xl font-bold">Frequently Asked Questions</h2>
-        <p className="text-lg text-gray-600 mt-2">
+        <p className="text-lg text-gray-600 mt-2 dark:text-gray-400">
           Here are some common questions about Tuvote.
         </p>
       </div>
 
-      <div className="mt-10 max-w-4xl mx-auto space-y-4">
+      <div className="mt-10 max-w-4xl mx-auto space-y-6">
         {faqs.map((faq, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: index * 0.1 }}
-            className="bg-white p-5 rounded-lg shadow-md border cursor-pointer"
+            className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 cursor-pointer hover:shadow-xl transition-all"
             onClick={() => toggleFAQ(index)}
           >
             <div className="flex justify-between items-center">
               <h3 className="text-lg font-semibold">{faq.question}</h3>
-              <span className="text-blue-600 text-xl">
-                {openIndex === index ? "−" : "+"}
-              </span>
-            </div>
-            {openIndex === index && (
-              <motion.p
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                transition={{ duration: 0.2 }}
-                className="mt-2 text-gray-600"
+              <motion.span
+                animate={{ rotate: openIndex === index ? 180 : 0 }}
+                className="text-blue-600 dark:text-blue-400 text-xl transition-transform"
               >
+                {openIndex === index ? "−" : "+"}
+              </motion.span>
+            </div>
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{
+                height: openIndex === index ? "auto" : 0,
+                opacity: openIndex === index ? 1 : 0,
+              }}
+              transition={{ duration: 0.3 }}
+              className="overflow-hidden"
+            >
+              <p className="mt-3 text-gray-600 dark:text-gray-300">
                 {faq.answer}
-              </motion.p>
-            )}
+              </p>
+            </motion.div>
           </motion.div>
         ))}
       </div>
