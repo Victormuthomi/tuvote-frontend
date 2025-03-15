@@ -9,7 +9,9 @@ const Elections = () => {
   useEffect(() => {
     const fetchElections = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/elections");
+        const response = await fetch(
+          "https://tuvote-backend-production.up.railway.app/api/elections",
+        );
         if (!response.ok) throw new Error("Failed to fetch elections");
 
         const data = await response.json();

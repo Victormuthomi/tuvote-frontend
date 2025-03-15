@@ -11,7 +11,9 @@ const Candidates = () => {
   useEffect(() => {
     const fetchCandidates = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/candidates");
+        const response = await fetch(
+          "https://tuvote-backend-production.up.railway.app/api/candidates",
+        );
 
         if (!response.ok) {
           throw new Error(
