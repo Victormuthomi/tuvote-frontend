@@ -16,7 +16,7 @@ const ElectionVoting = () => {
     const fetchCandidates = async () => {
       try {
         const response = await fetch(
-          "https://tuvote-backend-production.up.railway.app/api/candidates",
+          "https://tuvote-backend.onrender.com/api/candidates",
         );
         if (!response.ok) {
           throw new Error(`Failed to fetch candidates: ${response.statusText}`);

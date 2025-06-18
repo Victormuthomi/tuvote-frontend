@@ -10,7 +10,7 @@ const Elections = () => {
     const fetchElections = async () => {
       try {
         const response = await fetch(
-          "https://tuvote-backend-production.up.railway.app/api/elections",
+          "https://tuvote-backend.onrender.com/api/elections",
         );
         if (!response.ok) throw new Error("Failed to fetch elections");
 

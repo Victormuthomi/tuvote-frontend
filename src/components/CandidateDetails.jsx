@@ -13,7 +13,7 @@ const CandidateDetails = () => {
     const fetchCandidate = async () => {
       try {
         const response = await fetch(
-          `http://localhost:5000/api/candidates/${id}`,
+          `https://tuvote-backend.onrender.com/api/candidates/${id}`,
         );
         if (!response.ok) throw new Error("Candidate not found");
 

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "https://tuvote-backend-production.up.railway.app/api/auth/";
+const API_URL = "https://tuvote-backend.onrender.com/api/auth/";
 
 // Set the token globally for all requests
 const setAuthToken = (token) => {
